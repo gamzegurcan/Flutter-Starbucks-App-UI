@@ -3,7 +3,6 @@ import 'package:kartal/kartal.dart';
 import 'package:starbucks_app/core/constant/colors/app_colors.dart';
 import 'package:starbucks_app/core/constant/text/app_text.dart';
 import 'package:starbucks_app/product/widget/custom_app_bar.dart';
-import 'package:starbucks_app/product/widget/custom_menu_row.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);

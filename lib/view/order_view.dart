@@ -4,8 +4,8 @@ import 'package:starbucks_app/core/constant/colors/app_colors.dart';
 import 'package:starbucks_app/core/constant/text/app_text.dart';
 import 'package:starbucks_app/product/widget/custom_app_bar.dart';
 
-class HomeView extends StatelessWidget {
-  const HomeView({Key? key}) : super(key: key);
+class OrderView extends StatelessWidget {
+  const OrderView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class HomeView extends StatelessWidget {
           context.height * 0.09,
         ),
         child: const CustomAppBar(
-          title: AppText.title,
+          title: AppText.order,
         ),
       ),
       body: SizedBox(
