@@ -3,13 +3,10 @@ import 'package:starbucks_app/core/constant/colors/app_colors.dart';
 import 'package:starbucks_app/core/constant/styles/text_styles.dart';
 
 class CustomAppBar extends StatelessWidget {
-  
-
   final String? title;
   final Widget? leading;
 
-  const CustomAppBar({Key? key, this.leading, this.title})
-      : super(key: key);
+  const CustomAppBar({Key? key, this.leading, this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,12 +19,12 @@ class CustomAppBar extends StatelessWidget {
       ),
       actions: [
         IconButton(
-          icon: const Icon(Icons.add_alert),
+          icon: Image.asset('asset/icon/icon.png'),
           color: AppColors.darkGreenPrimary,
           onPressed: () {},
         ),
         IconButton(
-          icon: const Icon(Icons.add_alert),
+          icon: Image.asset('asset/icon/dot.png'),
           color: AppColors.darkGreenPrimary,
           onPressed: () {},
         ),
