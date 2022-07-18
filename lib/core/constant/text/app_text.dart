@@ -18,7 +18,14 @@ class AppText {
   static const String cost2 = "24,50 TL";
   static const String button = "2";
   static const String buttonText = "Satın Al";
+  static const String closeButton = "Kapat";
   static const String smallButtonText = "Ekle";
   static const String toffeNutText =
       "Toffee nut syrup is blended with ice and milk then topped with whipped cream and a delicious toffee nut flavoured topping.";
+  static const String orderCompleted = "Sipariş Tamamlandı";
+  static const String orderCompletedText = "Bizden sipariş verdiğiniz için";
+  static const String thanks = "teşekkürler!";
+  static const String congrat = "Tebrikler";
+  static const String point = "Bizden 2 puan kazandın";
+  static const String best = "Best sellers to best sellers increased";
 }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:starbucks_app/view/order_detail_view.dart';
-// import 'package:starbucks_app/view/home_view.dart';
+import 'package:starbucks_app/view/login_view.dart';
+import 'package:starbucks_app/view/menu_detail_view.dart';
+import 'package:starbucks_app/view/home_view.dart';
+import 'package:starbucks_app/view/order_completed_view.dart';
 // import 'package:starbucks_app/view/login_view.dart';
 import 'package:starbucks_app/view/order_view.dart';
 
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       title: 'Starbucks App',
       debugShowCheckedModeBanner: false,
-      home: OrderDetailView(),
+      home: OrderCompletedView(),
     );
   }
 }

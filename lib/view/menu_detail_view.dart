@@ -7,8 +7,8 @@ import 'package:starbucks_app/product/widget/custom_add_sub_button.dart';
 import 'package:starbucks_app/product/widget/custom_app_bar.dart';
 import 'package:starbucks_app/product/widget/custom_subbutton.dart';
 
-class OrderDetailView extends StatelessWidget {
-  const OrderDetailView({Key? key}) : super(key: key);
+class MenuDetailView extends StatelessWidget {
+  const MenuDetailView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -100,7 +100,7 @@ class OrderDetailView extends StatelessWidget {
                           context.emptySizedHeightBoxLow,
                           SizedBox(
                             width: context.width * 0.4,
-                            height: context.height * 0.05,
+                            height: context.height * 0.07,
                             child: Row(
                               children: [
                                 IconButton(
