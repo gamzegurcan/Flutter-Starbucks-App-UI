@@ -5,6 +5,7 @@ import 'package:starbucks_app/product/constant/styles/text_styles.dart';
 import 'package:starbucks_app/core/constant/text/app_text.dart';
 import 'package:starbucks_app/product/widget/inc_dec_button.dart.dart';
 import 'package:starbucks_app/product/widget/app_bar_widget.dart';
+import 'package:starbucks_app/product/widget/selectable_card.dart';
 import 'package:starbucks_app/product/widget/sub_button.dart';
 
 class MenuDetailView extends StatefulWidget {
@@ -115,31 +116,10 @@ class _MenuDetailViewState extends State<MenuDetailView> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
+                SelectableCard(
+                  selectSize: tallCardSelect,
                   height: context.height * 0.05,
-                  child: InkWell(
-                    onTap: () {
-                      setState(() {
-                        tallCardSelect == false
-                            ? tallCardSelect = true
-                            : tallCardSelect = false;
-                      });
-                    },
-                    child: Card(
-                      shape: RoundedRectangleBorder(
-                        side: BorderSide(
-                          color: tallCardSelect == false
-                              ? AppColors.grey
-                              : AppColors.darkGreenPrimary1,
-                        ),
-                        borderRadius: BorderRadius.circular(5.0),
-                      ),
-                      color: tallCardSelect == false
-                          ? AppColors.buttonGrey
-                          : AppColors.grey,
-                      child: Image.asset('asset/icon/tall.png'),
-                    ),
-                  ),
+                  image: 'asset/icon/tall.png',
                 ),
                 SizedBox(
                   height: context.height * 0.05,

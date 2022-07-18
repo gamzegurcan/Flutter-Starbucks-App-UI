@@ -20,35 +20,11 @@ class HomeView extends StatelessWidget {
         ),
       ),
       body: SizedBox(
-        height: context.height * 1,
+        height: context.height * 0.91,
         width: context.width * 1,
         child: Column(
           children: [
             context.emptySizedHeightBoxLow3x,
-            // SizedBox(
-            //   height: context.height * 0.45,
-            //   width: context.width * 0.9,
-            //   child: ListView(
-            //     children: const [
-            //       CustomMenuRow(
-            //         path: 'asset/images/hazelnut.png',
-            //         title: AppText.hazelnut,
-            //       ),
-            //       CustomMenuRow(
-            //         path: 'asset/images/caramel.png',
-            //         title: AppText.caramel,
-            //       ),
-            //       CustomMenuRow(
-            //         path: 'asset/images/mocha.png',
-            //         title: AppText.mocha,
-            //       ),
-            //       CustomMenuRow(
-            //         path: 'asset/images/espresso.png',
-            //         title: AppText.espresso,
-            //       ),
-            //     ],
-            //   ),
-            // ),
           ],
         ),
       ),
