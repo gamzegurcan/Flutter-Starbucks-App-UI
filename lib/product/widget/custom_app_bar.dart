@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:starbucks_app/core/constant/colors/app_colors.dart';
-import 'package:starbucks_app/core/constant/styles/text_styles.dart';
+import 'package:starbucks_app/product/constant/styles/text_styles.dart';
 
 class CustomAppBar extends StatelessWidget {
   final String? title;
