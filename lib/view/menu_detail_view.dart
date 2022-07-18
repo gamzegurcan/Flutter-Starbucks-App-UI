@@ -3,9 +3,9 @@ import 'package:kartal/kartal.dart';
 import 'package:starbucks_app/core/constant/colors/app_colors.dart';
 import 'package:starbucks_app/product/constant/styles/text_styles.dart';
 import 'package:starbucks_app/core/constant/text/app_text.dart';
-import 'package:starbucks_app/product/widget/custom_add_sub_button.dart';
-import 'package:starbucks_app/product/widget/custom_app_bar.dart';
-import 'package:starbucks_app/product/widget/custom_subbutton.dart';
+import 'package:starbucks_app/product/widget/inc_dec_button.dart.dart';
+import 'package:starbucks_app/product/widget/app_bar_widget.dart';
+import 'package:starbucks_app/product/widget/sub_button.dart';
 
 class MenuDetailView extends StatefulWidget {
   const MenuDetailView({Key? key}) : super(key: key);
@@ -27,7 +27,7 @@ class _MenuDetailViewState extends State<MenuDetailView> {
         preferredSize: Size.fromHeight(
           context.height * 0.09,
         ),
-        child: CustomAppBar(
+        child: AppBarWidget(
           title: AppText.orderDetail,
           leading: IconButton(
             onPressed: () {},
@@ -84,7 +84,7 @@ class _MenuDetailViewState extends State<MenuDetailView> {
               ),
             ),
             _coffeeQuantity(context),
-            CustomSubButton(
+            SubButton(
               child: Text(
                 AppText.buttonText,
                 style: TextStyles.buttonText(context, AppColors.white),
@@ -103,7 +103,7 @@ class _MenuDetailViewState extends State<MenuDetailView> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CustomAddSubButton(
+          IncDecButton(
             width: context.width * 0.35,
             height: context.height * 0.05,
           ),

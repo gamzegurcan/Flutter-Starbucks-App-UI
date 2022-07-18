@@ -4,8 +4,8 @@ import 'package:kartal/kartal.dart';
 import 'package:starbucks_app/core/constant/colors/app_colors.dart';
 import 'package:starbucks_app/product/constant/styles/text_styles.dart';
 import 'package:starbucks_app/core/constant/text/app_text.dart';
-import 'package:starbucks_app/product/widget/custom_app_bar.dart';
-import 'package:starbucks_app/product/widget/custom_subbutton.dart';
+import 'package:starbucks_app/product/widget/app_bar_widget.dart';
+import 'package:starbucks_app/product/widget/sub_button.dart';
 
 class OrderCompletedView extends StatelessWidget {
   const OrderCompletedView({Key? key}) : super(key: key);
@@ -18,7 +18,7 @@ class OrderCompletedView extends StatelessWidget {
         preferredSize: Size.fromHeight(
           context.height * 0.09,
         ),
-        child: const CustomAppBar(
+        child: const AppBarWidget(
           title: AppText.orderCompleted,
         ),
       ),
@@ -118,7 +118,7 @@ class OrderCompletedView extends StatelessWidget {
                       width: context.width * 0.9,
                     ),
                   ),
-                  CustomSubButton(
+                  SubButton(
                     child: Text(
                       AppText.closeButton,
                       style: TextStyles.buttonText(context, AppColors.white),

@@ -3,11 +3,11 @@ import 'package:starbucks_app/core/constant/colors/app_colors.dart';
 import 'package:starbucks_app/product/constant/styles/text_styles.dart';
 import 'package:starbucks_app/core/constant/text/app_text.dart';
 
-class CustomAddSubButton extends StatelessWidget {
+class IncDecButton extends StatelessWidget {
   final double? height;
   final double? width;
 
-  const CustomAddSubButton({Key? key, this.height, this.width})
+  const IncDecButton({Key? key, this.height, this.width})
       : super(key: key);
 
   @override

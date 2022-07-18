@@ -5,13 +5,13 @@ import 'package:starbucks_app/product/constant/styles/text_styles.dart';
 import 'package:starbucks_app/core/constant/text/app_text.dart';
 import 'package:starbucks_app/product/widget/custom_elevated_button.dart';
 
-class CustomMenuRow extends StatelessWidget {
+class MenuRow extends StatelessWidget {
   final String? path;
   final String? title;
   final double? height;
   final double? width;
 
-  const CustomMenuRow(
+  const MenuRow(
       {Key? key,
       required this.title,
       required this.height,

@@ -3,12 +3,12 @@ import 'package:kartal/kartal.dart';
 import 'package:starbucks_app/core/constant/colors/app_colors.dart';
 import 'package:starbucks_app/product/widget/custom_elevated_button.dart';
 
-class CustomSubButton extends StatelessWidget {
+class SubButton extends StatelessWidget {
   final Widget child;
 
   final VoidCallback? onPressed;
 
-  const CustomSubButton({Key? key, this.onPressed, required this.child})
+  const SubButton({Key? key, this.onPressed, required this.child})
       : super(key: key);
 
   @override
