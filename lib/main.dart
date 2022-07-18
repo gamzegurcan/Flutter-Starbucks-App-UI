@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       title: 'Starbucks App',
       debugShowCheckedModeBanner: false,
-      home: BottomNavbar(),
+      home: MenuDetailView(),
     );
   }
 }

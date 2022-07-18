@@ -3,6 +3,7 @@ import 'package:kartal/kartal.dart';
 import 'package:starbucks_app/core/constant/colors/app_colors.dart';
 import 'package:starbucks_app/core/constant/text/app_text.dart';
 import 'package:starbucks_app/product/widget/custom_app_bar.dart';
+import 'package:starbucks_app/product/widget/custom_menu_row.dart';
 
 class OrderView extends StatelessWidget {
   const OrderView({Key? key}) : super(key: key);
@@ -20,8 +21,21 @@ class OrderView extends StatelessWidget {
         ),
       ),
       body: SizedBox(
-        height: context.width * 1,
-      ),
+        height: context.height * 1,
+        width: context.width * 1,
+        child: Column(
+          children: [
+            context.emptySizedHeightBoxLow3x,
+            CustomMenuRow(
+              height: context.height * 0.1,
+              width: context.width * 0.9,
+              title: AppText.hazelnut,
+              path: 'asset/images/toffeeNut.png',
+            )
+
+            /* */
+          ],
+      ),),
     );
   }
 }
