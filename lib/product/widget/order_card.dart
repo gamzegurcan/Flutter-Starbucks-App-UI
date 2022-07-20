@@ -63,6 +63,7 @@ class OrderCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Image.asset('asset/icon/clock.png'),
+                    context.emptySizedWidthBoxNormal,
                     Text(
                       AppText.time,
                       style: TextStyles.h4(context, AppColors.dark),
@@ -116,6 +117,7 @@ class OrderCard extends StatelessWidget {
         Row(
           children: [
             Image.asset('asset/icon/house.png'),
+            context.emptySizedWidthBoxNormal,
             Text(
               AppText.home,
               style: TextStyles.h4(context, AppColors.dark),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:kartal/kartal.dart';
 import 'package:starbucks_app/core/constant/colors/app_colors.dart';
 import 'package:starbucks_app/core/constant/text/app_text.dart';
@@ -23,67 +24,102 @@ class OrderView extends StatelessWidget {
           title: AppText.order,
         ),
       ),
-      body: SizedBox(
-        height: context.height * 1,
-        width: context.width * 1,
+      body: _body(context),
+    );
+  }
+
+  SizedBox _body(BuildContext context) {
+    return SizedBox(
+      height: context.height * 0.91,
+      width: context.width * 1,
+      child: _column(context),
+    );
+  }
+
+  Column _column(BuildContext context) {
+    return Column(
+      children: [
+        context.emptySizedHeightBoxLow,
+        const OrderCard(),
+        context.emptySizedHeightBoxLow,
+        menuContainer(context),
+      ],
+    );
+  }
+
+  Container menuContainer(BuildContext context) {
+    return Container(
+      width: context.width * 1,
+      height: context.height * 0.47,
+      color: AppColors.white,
+      child: Padding(
+        padding: context.horizontalPaddingNormal,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            context.emptySizedHeightBoxLow,
-            const OrderCard(),
-            context.emptySizedHeightBoxLow,
-            Container(
+            Text(
+              AppText.menu,
+              style: TextStyles.h4(context, AppColors.dark),
+            ),
+            SizedBox(
               width: context.width * 1,
-              height: context.height * 0.47,
-              color: AppColors.white,
-              child: Padding(
-                padding: context.horizontalPaddingNormal,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      AppText.menu,
-                      style: TextStyles.h4(context, AppColors.dark),
-                    ),
-                    Row(
-                      children: [
-                        CustomElevatedButton(
-                          width: context.width * 0.3,
-                          height: context.height * 0.06,
-                          color: AppColors.buttonGrey,
-                          borderRadius: 5,
-                          onPressed: () {},
-                          child: Text(AppText.bestSeller,
-                              style: TextStyles.buttonText(
-                                  context, AppColors.dark)),
-                        )
-                      ],
-                    ),
-                    MenuRow(
-                      height: context.height * 0.1,
-                      width: context.width * 0.9,
-                      title: AppText.hazelnut,
-                      path: 'asset/images/toffeeNut.png',
-                    ),
-                    MenuRow(
-                      height: context.height * 0.1,
-                      width: context.width * 0.9,
-                      title: AppText.hazelnut,
-                      path: 'asset/images/toffeeNut.png',
-                    ),
-                    MenuRow(
-                      height: context.height * 0.1,
-                      width: context.width * 0.9,
-                      title: AppText.hazelnut,
-                      path: 'asset/images/toffeeNut.png',
-                    ),
-                  ],
-                ),
-              ),
+              height: context.height * 0.06,
+              child: menuRow(),
+            ),
+            SizedBox(
+              width: context.width * 1,
+              height: context.height * 0.33,
+              child: coffeeList(),
             ),
           ],
         ),
       ),
     );
+  }
+
+  ListView menuRow() {
+    return ListView.builder(
+        itemCount: 4,
+        scrollDirection: Axis.horizontal,
+        itemBuilder: (BuildContext context, int index) {
+          return Row(
+            children: [
+              CustomElevatedButton(
+                color: AppColors.buttonGrey,
+                borderRadius: 10,
+                width: context.width * 0.28,
+                height: context.height * 0.06,
+                child: Text(
+                  AppText.menuText[index],
+                  style: TextStyles.buttonText(
+                    context,
+                    AppColors.dark,
+                  ),
+                ),
+              ),
+              context.emptySizedWidthBoxLow,
+            ],
+          );
+        });
+  }
+
+  ListView coffeeList() {
+    return ListView.builder(
+        itemCount: 4,
+        scrollDirection: Axis.vertical,
+        itemBuilder: (BuildContext context, int index) {
+          return Column(
+            children: [
+              MenuRow(
+                height: context.height * 0.1,
+                width: context.width * 0.9,
+                title: AppText.coffeeMenu[index],
+                path: 'asset/images/toffeeNut.png',
+              ),
+              context.emptySizedHeightBoxNormal,
+            ],
+          );
+        });
   }
 }

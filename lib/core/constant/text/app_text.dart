@@ -38,4 +38,18 @@ class AppText {
   static const String bestSeller = "Çok Satanlar";
   static const String snack = "Yiyecek";
   static const String news = "Yeniler";
+  static const String coffees = "Kahve";
+
+  static const List menuText = [
+    bestSeller,
+    snack,
+    news,
+    coffees,
+  ];
+  static const List coffeeMenu = [
+    hazelnut,
+    caramel,
+    mocha,
+    espresso,
+  ];
 }
