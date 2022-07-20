@@ -32,22 +32,18 @@ class OrderView extends StatelessWidget {
     return SizedBox(
       height: context.height * 0.91,
       width: context.width * 1,
-      child: _column(context),
+      child: Column(
+        children: [
+          context.emptySizedHeightBoxLow,
+          const OrderCard(),
+          context.emptySizedHeightBoxLow,
+          _menuContainer(context),
+        ],
+      ),
     );
   }
 
-  Column _column(BuildContext context) {
-    return Column(
-      children: [
-        context.emptySizedHeightBoxLow,
-        const OrderCard(),
-        context.emptySizedHeightBoxLow,
-        menuContainer(context),
-      ],
-    );
-  }
-
-  Container menuContainer(BuildContext context) {
+  Container _menuContainer(BuildContext context) {
     return Container(
       width: context.width * 1,
       height: context.height * 0.47,
@@ -65,12 +61,12 @@ class OrderView extends StatelessWidget {
             SizedBox(
               width: context.width * 1,
               height: context.height * 0.06,
-              child: menuRow(),
+              child: _menuRow(),
             ),
             SizedBox(
               width: context.width * 1,
               height: context.height * 0.33,
-              child: coffeeList(),
+              child: _coffeeList(),
             ),
           ],
         ),
@@ -78,7 +74,7 @@ class OrderView extends StatelessWidget {
     );
   }
 
-  ListView menuRow() {
+  ListView _menuRow() {
     return ListView.builder(
         itemCount: 4,
         scrollDirection: Axis.horizontal,
@@ -104,7 +100,7 @@ class OrderView extends StatelessWidget {
         });
   }
 
-  ListView coffeeList() {
+  ListView _coffeeList() {
     return ListView.builder(
         itemCount: 4,
         scrollDirection: Axis.vertical,

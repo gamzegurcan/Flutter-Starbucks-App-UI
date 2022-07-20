@@ -17,6 +17,13 @@ class AppText {
   static const String selectOrderDetail = "Sipariş Detayı";
   static const String cost = "20 TL";
   static const String cost2 = "24,50 TL";
+  static const String cost3 = "55,35 TL";
+  static const String money = "Toplam Param";
+  static const String load = "Yükleme yap";
+  static const String campaigns = "Kampanyalar";
+  static const String lorem = "Lorem Ipsum";
+  static const String loremText =
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet gravida quam aliquam aenean fermentum non.";
   static const String button = "2";
   static const String buttonText = "Satın Al";
   static const String closeButton = "Kapat";
