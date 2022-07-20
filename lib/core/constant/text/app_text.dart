@@ -36,6 +36,7 @@ class AppText {
   static const String congrat = "Tebrikler";
   static const String point = "Bizden 2 puan kazandın";
   static const String best = "Best sellers to best sellers increased";
+  static const String star = "7 / 10";
   static const String takeout = "Gel Al Seçimi";
   static const String time = "13:00";
   static const String change = "Değiştir";
