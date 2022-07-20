@@ -29,4 +29,13 @@ class AppText {
   static const String congrat = "Tebrikler";
   static const String point = "Bizden 2 puan kazandın";
   static const String best = "Best sellers to best sellers increased";
+  static const String takeout = "Gel Al Seçimi";
+  static const String time = "13:00";
+  static const String change = "Değiştir";
+  static const String home = "Kadıköy,İstanbul";
+  static const String cardInfo = "Paketinizi alma zamanı";
+  static const String menu = "Menu";
+  static const String bestSeller = "Çok Satanlar";
+  static const String snack = "Yiyecek";
+  static const String news = "Yeniler";
 }
