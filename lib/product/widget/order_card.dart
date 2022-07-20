@@ -18,20 +18,22 @@ class OrderCard extends StatelessWidget {
       child: Padding(
         padding: context.paddingNormal,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               AppText.takeout,
               style: TextStyles.h4(context, AppColors.dark),
             ),
             SizedBox(
-              width: context.width * 0.9,
+              width: context.width * 0.92,
               height: context.height * 0.13,
-              child: timeCard(context),
+              child: _timeCard(context),
             ),
             SizedBox(
-              width: context.width * 0.9,
+              width: context.width * 0.92,
               height: context.height * 0.1,
-              child: locationCard(context),
+              child: _locationCard(context),
             ),
           ],
         ),
@@ -39,7 +41,7 @@ class OrderCard extends StatelessWidget {
     );
   }
 
-  Card timeCard(BuildContext context) {
+  Card _timeCard(BuildContext context) {
     return Card(
       shape: RoundedRectangleBorder(
         side: const BorderSide(
@@ -63,13 +65,14 @@ class OrderCard extends StatelessWidget {
                     Image.asset('asset/icon/clock.png'),
                     Text(
                       AppText.time,
-                      style: TextStyles.h5(context, AppColors.dark),
+                      style: TextStyles.h4(context, AppColors.dark),
                     ),
                   ],
                 ),
                 Text(
                   AppText.change,
-                  style: TextStyles.h5(context, AppColors.darkGreenPrimary),
+                  style: TextStyles.buttonText(
+                      context, AppColors.darkGreenPrimary),
                 ),
               ],
             ),
@@ -90,7 +93,7 @@ class OrderCard extends StatelessWidget {
     );
   }
 
-  Card locationCard(BuildContext context) {
+  Card _locationCard(BuildContext context) {
     return Card(
       shape: RoundedRectangleBorder(
         side: const BorderSide(
@@ -121,7 +124,7 @@ class OrderCard extends StatelessWidget {
         ),
         Text(
           AppText.change,
-          style: TextStyles.h5(context, AppColors.darkGreenPrimary),
+          style: TextStyles.buttonText(context, AppColors.darkGreenPrimary),
         ),
       ],
     );
