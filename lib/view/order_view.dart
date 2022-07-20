@@ -4,6 +4,7 @@ import 'package:starbucks_app/core/constant/colors/app_colors.dart';
 import 'package:starbucks_app/core/constant/text/app_text.dart';
 import 'package:starbucks_app/product/constant/styles/text_styles.dart';
 import 'package:starbucks_app/product/widget/app_bar_widget.dart';
+import 'package:starbucks_app/product/widget/custom_elevated_button.dart';
 import 'package:starbucks_app/product/widget/menu_row.dart';
 import 'package:starbucks_app/product/widget/order_card.dart';
 
@@ -28,14 +29,58 @@ class OrderView extends StatelessWidget {
         child: Column(
           children: [
             context.emptySizedHeightBoxLow,
-            // MenuRow(
-            //   height: context.height * 0.1,
-            //   width: context.width * 0.9,
-            //   title: AppText.hazelnut,
-            //   path: 'asset/images/toffeeNut.png',
-            // ),
-            context.emptySizedHeightBoxLow3x,
             const OrderCard(),
+            context.emptySizedHeightBoxLow,
+            Container(
+              width: context.width * 1,
+              height: context.height * 0.47,
+              color: AppColors.white,
+              child: Padding(
+                padding: context.horizontalPaddingNormal,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      AppText.menu,
+                      style: TextStyles.h4(context, AppColors.dark),
+                    ),
+                    Row(
+                      children: [
+                        CustomElevatedButton(
+                          width: context.width * 0.3,
+                          height: context.height * 0.06,
+                          color: AppColors.buttonGrey,
+                          borderRadius: 5,
+                          onPressed: () {},
+                          child: Text(AppText.bestSeller,
+                              style: TextStyles.buttonText(
+                                  context, AppColors.dark)),
+                        )
+                      ],
+                    ),
+                    MenuRow(
+                      height: context.height * 0.1,
+                      width: context.width * 0.9,
+                      title: AppText.hazelnut,
+                      path: 'asset/images/toffeeNut.png',
+                    ),
+                    MenuRow(
+                      height: context.height * 0.1,
+                      width: context.width * 0.9,
+                      title: AppText.hazelnut,
+                      path: 'asset/images/toffeeNut.png',
+                    ),
+                    MenuRow(
+                      height: context.height * 0.1,
+                      width: context.width * 0.9,
+                      title: AppText.hazelnut,
+                      path: 'asset/images/toffeeNut.png',
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
