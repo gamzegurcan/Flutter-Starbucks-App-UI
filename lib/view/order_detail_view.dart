@@ -21,7 +21,9 @@ class OrderDetailView extends StatelessWidget {
         child: AppBarWidget(
           title: AppText.selectOrderDetail,
           leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             icon: Image.asset('asset/icon/back.png'),
           ),
         ),
@@ -36,7 +38,7 @@ class OrderDetailView extends StatelessWidget {
             context.emptySizedHeightBoxLow,
             Container(
               width: context.width * 1,
-              height: context.height * 0.3,
+              height: context.height * 0.35,
               color: AppColors.white,
               child: Padding(
                 padding: context.paddingNormal,
@@ -58,16 +60,15 @@ class OrderDetailView extends StatelessWidget {
                     ),
                     context.emptySizedHeightBoxLow3x,
                     MenuRow(
+                      boolfalse: true,
                       title: AppText.hazelnut,
-                      height: context.height * 0.1,
-                      width: context.width * 0.9,
+                      height: context.height * 0.15,
+                      width: context.width * 1,
                       path: 'asset/images/hazelnut.png',
                     ),
-                    context.emptySizedHeightBoxLow,
-                    // Divider(
-                    //   color: AppColors.buttonGrey,
-                    //   height: context.height * 0.01,
-                    // ),
+                    Divider(
+                      height: context.height * 0.02,
+                    ),
                     Padding(
                       padding: context.paddingNormal,
                       child: Row(
@@ -83,6 +84,125 @@ class OrderDetailView extends StatelessWidget {
                           ),
                         ],
                       ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            context.emptySizedHeightBoxLow,
+            Container(
+              width: context.width * 1,
+              height: context.height * 0.19,
+              color: AppColors.white,
+              child: Padding(
+                padding: context.paddingNormal,
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(AppText.payment,
+                            style: TextStyles.h4(context, AppColors.dark)),
+                        Text.rich(TextSpan(children: [
+                          TextSpan(
+                              text: AppText.load,
+                              style: TextStyles.buttonText(
+                                  context, AppColors.darkGreenPrimary)),
+                          const WidgetSpan(
+                              child: Icon(
+                            Icons.arrow_forward,
+                            color: AppColors.darkGreenPrimary,
+                            size: 15,
+                          ))
+                        ])),
+                      ],
+                    ),
+                    context.emptySizedHeightBoxLow,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          height: context.height * 0.11,
+                          width: context.width * 0.32,
+                          decoration: const BoxDecoration(
+                            color: AppColors.mainGreenPrimary,
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.white,
+                                offset: Offset(0.0, 1.0),
+                                blurRadius: 6.0,
+                              ),
+                            ],
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10.0)),
+                          ),
+                          child: Stack(
+                            children: [
+                              SizedBox(
+                                height: context.height * 0.11,
+                                child: Image.asset(
+                                  'asset/images/logo2.png',
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              Padding(
+                                padding: context.paddingLow,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      AppText.money,
+                                      style: TextStyles.h5(
+                                        context,
+                                        AppColors.white,
+                                      ),
+                                    ),
+                                    context.emptySizedHeightBoxLow,
+                                    Text(
+                                      AppText.cost3,
+                                      style: TextStyles.h2(
+                                          context, AppColors.white),
+                                    ),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        context.emptySizedWidthBoxNormal,
+                        Container(
+                          height: context.height * 0.11,
+                          width: context.width * 0.32,
+                          decoration: const BoxDecoration(
+                            color: AppColors.buttonGrey,
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.white,
+                                offset: Offset(0.0, 1.0),
+                                blurRadius: 6.0,
+                              ),
+                            ],
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10.0)),
+                          ),
+                          child: Padding(
+                            padding: context.paddingLow,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  AppText.card,
+                                  style: TextStyles.h5(context, AppColors.dark),
+                                ),
+                                Text(
+                                  AppText.card2,
+                                  style: TextStyles.h5(context, AppColors.dark),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),

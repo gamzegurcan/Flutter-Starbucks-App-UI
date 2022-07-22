@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:kartal/kartal.dart';
 import 'package:starbucks_app/core/constant/colors/app_colors.dart';
 import 'package:starbucks_app/view/home_view.dart';
-import 'package:starbucks_app/view/menu_detail_view.dart';
 import 'package:starbucks_app/view/order_view.dart';
+
+import '../../view/order_select_view.dart';
 
 class BottomNavbar extends StatefulWidget {
   const BottomNavbar({Key? key}) : super(key: key);
@@ -20,8 +21,8 @@ class _BottomNavbarState extends State<BottomNavbar> {
   static final List<Widget> _widgetOptions = <Widget>[
     const HomeView(),
     const OrderView(),
+    const OrderSelectView(),
     const HomeView(),
-    const MenuDetailView(),
   ];
 
   void _onItemTapped(int index) {

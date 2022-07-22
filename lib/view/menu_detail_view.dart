@@ -7,8 +7,10 @@ import 'package:starbucks_app/product/widget/inc_dec_button.dart.dart';
 import 'package:starbucks_app/product/widget/app_bar_widget.dart';
 import 'package:starbucks_app/product/widget/selectable_card.dart';
 import 'package:starbucks_app/product/widget/sub_button.dart';
-import 'package:starbucks_app/view/order_completed_view.dart';
-import 'package:starbucks_app/view/order_view.dart';
+
+import 'package:starbucks_app/view/order_detail_view.dart';
+
+import 'order_view.dart';
 
 class MenuDetailView extends StatefulWidget {
   const MenuDetailView({Key? key}) : super(key: key);
@@ -34,7 +36,7 @@ class _MenuDetailViewState extends State<MenuDetailView> {
           title: AppText.orderDetail,
           leading: IconButton(
             onPressed: () {
-              // context.navigateToPage(const OrderView());
+              Navigator.pop(context);
             },
             icon: Image.asset('asset/icon/back.png'),
           ),
@@ -91,7 +93,12 @@ class _MenuDetailViewState extends State<MenuDetailView> {
             _coffeeQuantity(context),
             SubButton(
               onPressed: () {
-                // context.navigateToPage(const OrderCompletedView());
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const OrderDetailView(),
+                  ),
+                );
               },
               child: Text(
                 AppText.buttonText,
@@ -117,7 +124,7 @@ class _MenuDetailViewState extends State<MenuDetailView> {
           ),
           //context.emptySizedHeightBoxLow,
           SizedBox(
-            width: context.width * 0.5,
+            width: context.width * 0.4,
             height: context.height * 0.05,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -128,57 +135,15 @@ class _MenuDetailViewState extends State<MenuDetailView> {
                   height: context.height * 0.05,
                   image: 'asset/icon/tall.png',
                 ),
-                SizedBox(
+                SelectableCard(
+                  selectSize: grandeCardSelect,
                   height: context.height * 0.05,
-                  child: InkWell(
-                    onTap: () {
-                      setState(() {
-                        grandeCardSelect == false
-                            ? grandeCardSelect = true
-                            : grandeCardSelect = false;
-                      });
-                    },
-                    child: Card(
-                      shape: RoundedRectangleBorder(
-                        side: BorderSide(
-                          color: grandeCardSelect == false
-                              ? AppColors.grey
-                              : AppColors.darkGreenPrimary1,
-                        ),
-                        borderRadius: BorderRadius.circular(5.0),
-                      ),
-                      color: grandeCardSelect == false
-                          ? AppColors.buttonGrey
-                          : AppColors.grey,
-                      child: Image.asset('asset/icon/grande.png'),
-                    ),
-                  ),
+                  image: 'asset/icon/grande.png',
                 ),
-                SizedBox(
+                SelectableCard(
+                  selectSize: ventiCardSelect,
                   height: context.height * 0.05,
-                  child: InkWell(
-                    onTap: () {
-                      setState(() {
-                        ventiCardSelect == false
-                            ? ventiCardSelect = true
-                            : ventiCardSelect = false;
-                      });
-                    },
-                    child: Card(
-                      shape: RoundedRectangleBorder(
-                        side: BorderSide(
-                          color: ventiCardSelect == false
-                              ? AppColors.grey
-                              : AppColors.darkGreenPrimary1,
-                        ),
-                        borderRadius: BorderRadius.circular(5.0),
-                      ),
-                      color: ventiCardSelect == false
-                          ? AppColors.buttonGrey
-                          : AppColors.grey,
-                      child: Image.asset('asset/icon/venti.png'),
-                    ),
-                  ),
+                  image: 'asset/icon/venti.png',
                 ),
               ],
             ),

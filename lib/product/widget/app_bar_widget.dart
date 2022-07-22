@@ -11,6 +11,7 @@ class AppBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      automaticallyImplyLeading: false,
       centerTitle: false,
       leading: leading,
       backgroundColor: AppColors.white,

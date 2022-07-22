@@ -7,6 +7,11 @@ class AppText {
   static const String password = "Password";
   static const String forgot = "Forgot your password?";
   static const String login = "Login";
+  static const String homeCoffee = "6 / 15";
+  static const String starCount = "Yıldız Bakiyesi";
+  static const String drink = "İkram İçecek";
+  static const String zero = "0";
+  static const String details = "Detaylar";
   static const String hazelnut = "Hazelnut Coffee";
   static const String caramel = "Caramel Frappuccino";
   static const String mocha = "Mocha Frappuccino";

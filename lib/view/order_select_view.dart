@@ -8,8 +8,8 @@ import 'package:starbucks_app/product/widget/custom_elevated_button.dart';
 import 'package:starbucks_app/product/widget/menu_row.dart';
 import 'package:starbucks_app/product/widget/order_card.dart';
 
-class OrderView extends StatelessWidget {
-  const OrderView({Key? key}) : super(key: key);
+class OrderSelectView extends StatelessWidget {
+  const OrderSelectView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -108,7 +108,7 @@ class OrderView extends StatelessWidget {
           return Column(
             children: [
               MenuRow(
-                boolfalse: false,
+                boolfalse: true,
                 height: context.height * 0.12,
                 width: context.width * 1,
                 title: AppText.coffeeMenu[index],

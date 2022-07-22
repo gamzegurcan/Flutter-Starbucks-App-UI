@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:starbucks_app/core/constant/colors/app_colors.dart';
 
 class SelectableCard extends StatefulWidget {
-  final bool? selectSize ;
+  late bool? selectSize ;
   final double? height;
   final double? width;
   final String? image;
 
-  const SelectableCard(
+  SelectableCard(
       {Key? key, this.height, this.width, required this.selectSize, this.image})
       : super(key: key);
 
