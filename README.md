@@ -35,7 +35,7 @@ Project Run
   <tr>
     <td>Login Page</td>
     <td>Home Page</td>
-    <td>Menu Detail</td>  
+    <td>Order Page</td>  
   </tr>
   <tr>
     <td><img src="github/login.png" width=270 height=490></td>
