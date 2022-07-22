@@ -4,6 +4,7 @@ import 'package:starbucks_app/core/constant/colors/app_colors.dart';
 import 'package:starbucks_app/product/constant/styles/text_styles.dart';
 import 'package:starbucks_app/core/constant/text/app_text.dart';
 import 'package:starbucks_app/product/widget/custom_elevated_button.dart';
+import 'package:starbucks_app/view/menu_detail_view.dart';
 
 class MenuRow extends StatelessWidget {
   final String? path;
@@ -16,11 +17,12 @@ class MenuRow extends StatelessWidget {
       required this.title,
       required this.height,
       required this.width,
-      required this.path})
+      required this.path,
+      })
       : super(key: key);
 
   @override
-    Widget build(BuildContext context) {
+  Widget build(BuildContext context) {
     return SizedBox(
       height: height ?? 50,
       width: width ?? 400,
@@ -52,6 +54,7 @@ class MenuRow extends StatelessWidget {
                         AppText.cost,
                         style: TextStyles.h5(context, AppColors.dark),
                       ),
+                      
                     ],
                   ),
                 ),
@@ -72,7 +75,9 @@ class MenuRow extends StatelessWidget {
                   AppText.smallButtonText,
                   style: TextStyles.buttonText(context, AppColors.white),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  // context.navigateToPage(const MenuDetailView());
+                },
               ),
             ],
           )

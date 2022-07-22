@@ -14,26 +14,22 @@ class OrderCompletedView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
-      appBar: appBar(context),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(
+          context.height * 0.09,
+        ),
+        child: const AppBarWidget(
+          title: AppText.orderCompleted,
+        ),
+      ),
       body: _body(context),
-    );
-  }
-
-  PreferredSize appBar(BuildContext context) {
-    return PreferredSize(
-      preferredSize: Size.fromHeight(
-        context.height * 0.09,
-      ),
-      child: const AppBarWidget(
-        title: AppText.orderCompleted,
-      ),
     );
   }
 }
 
 SizedBox _body(BuildContext context) {
   return SizedBox(
-    height: context.height * 1,
+    height: context.height * 0.91,
     width: context.width * 1,
     child: Column(
       children: [

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:starbucks_app/product/widget/bottom_navbar.dart';
-import 'package:starbucks_app/view/order_completed_view.dart';
+import 'package:starbucks_app/view/order_detail_view.dart';
 
 void main() => runApp(const MyApp());
 
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       title: 'Starbucks App',
       debugShowCheckedModeBanner: false,
-      home: OrderCompletedView(),
+      home: OrderDetailView(),
     );
   }
 }

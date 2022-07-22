@@ -19,7 +19,7 @@ class SubButton extends StatelessWidget {
       height: context.height * 0.08,
       width: context.width * 0.9,
       borderRadius: 5.0,
-      onPressed: () {},
+      onPressed: onPressed,
     );
   }
 }

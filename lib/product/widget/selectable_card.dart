@@ -16,7 +16,7 @@ class SelectableCard extends StatefulWidget {
 }
 
 class _SelectableCardState extends State<SelectableCard> {
-  bool selectSize = false;
+  
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -25,7 +25,7 @@ class _SelectableCardState extends State<SelectableCard> {
       child: InkWell(
         onTap: () {
           setState(() {
-            selectSize == false ? selectSize = true : selectSize = false;
+            widget.selectSize == false ? widget.selectSize = true : widget.selectSize = false;
           });
         },
         child: Card(

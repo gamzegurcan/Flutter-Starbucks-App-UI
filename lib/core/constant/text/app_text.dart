@@ -26,6 +26,7 @@ class AppText {
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet gravida quam aliquam aenean fermentum non.";
   static const String button = "2";
   static const String buttonText = "Satın Al";
+  static const String buttonText2 = "Öde";
   static const String closeButton = "Kapat";
   static const String smallButtonText = "Ekle";
   static const String toffeNutText =
@@ -47,6 +48,13 @@ class AppText {
   static const String snack = "Yiyecek";
   static const String news = "Yeniler";
   static const String coffees = "Kahve";
+  static const String orderList = "Sipariş Listesi";
+  static const String addMore = "Add more";
+  static const String total = "Total";
+  static const String totalPrice = "20.000 TL";
+  static const String payment = "Ödeme Şekli";
+  static const String card = "Kredi";
+  static const String card2 = "Banka Kartı";
 
   static const List menuText = [
     bestSeller,
