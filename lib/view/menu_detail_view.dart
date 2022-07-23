@@ -7,10 +7,8 @@ import 'package:starbucks_app/product/widget/inc_dec_button.dart.dart';
 import 'package:starbucks_app/product/widget/app_bar_widget.dart';
 import 'package:starbucks_app/product/widget/selectable_card.dart';
 import 'package:starbucks_app/product/widget/sub_button.dart';
-
 import 'package:starbucks_app/view/order_detail_view.dart';
 
-import 'order_view.dart';
 
 class MenuDetailView extends StatefulWidget {
   const MenuDetailView({Key? key}) : super(key: key);
